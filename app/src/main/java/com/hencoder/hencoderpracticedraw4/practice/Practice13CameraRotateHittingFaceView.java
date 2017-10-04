@@ -14,7 +14,6 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
-
 import com.hencoder.hencoderpracticedraw4.R;
 
 public class Practice13CameraRotateHittingFaceView extends View {
@@ -78,6 +77,7 @@ public class Practice13CameraRotateHittingFaceView extends View {
 
         camera.save();
         matrix.reset();
+        camera.setLocation(0, 0, -20);
         camera.rotateX(degree);
         camera.getMatrix(matrix);
         camera.restore();
